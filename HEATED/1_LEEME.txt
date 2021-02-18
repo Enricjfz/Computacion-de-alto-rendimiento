@@ -1,0 +1,5 @@
+Se encuentra en cada carpeta los ficheros del código utilizados en cada parte 
+y en algunos se encuentra hasta el ejecutable utilizado/s. En la carpeta de vectorización
+se encuentra el report que ofrece icc al intentar vectorizar. En algunos casos 
+también se encuentra la imagen .bmp obtenida al ejecutar grid_to_bmp.
+

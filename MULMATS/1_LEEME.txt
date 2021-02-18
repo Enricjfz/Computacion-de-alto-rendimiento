@@ -1,0 +1,5 @@
+En las carpetas se han guardado los códigos sin los ejecutables que se han utilizado a lo largo del desarrollo de la memoria.
+En la carpeta de vectorización se encuentra el report que se obtiene del compilador de icc. En la carpeta de Optimización se encuentra la versión optimizada ikj, sin las optimizaciones que ofrece el compilador icc.
+En la carpeta de OpenMP se encuentra la versión paralelizada y paralelizada junto con vectorización. 
+En la MPI se encuentra la versión de MPI con pragmas.
+En la de CUDA se encuentra la versión de CUDA.

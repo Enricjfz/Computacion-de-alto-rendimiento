@@ -1,0 +1,285 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+Intel(R) C Intel(R) 64 Compiler for applications running on Intel(R) 64, Version 19.1.2.254 Build 20200623
+
+Compiler options: -O3 -qopt-report=4 -qopt-report-phase=VEC,LOOP -qopt-report-file=report.txt -c
+
+Begin optimization report for: main(int, char **)
+
+    Report from: Loop nest & Vector optimizations [loop, vec]
+
+
+LOOP BEGIN at heated_plate_optimizado.c(171,3)
+   remark #25045: Fused Loops: ( 171 174 )
+
+   remark #15329: vectorization support: non-unit strided store was emulated for the variable <w[i][0]>, stride is 500   [ heated_plate_optimizado.c(172,3) ]
+   remark #15329: vectorization support: non-unit strided store was emulated for the variable <w[i][499]>, stride is 500   [ heated_plate_optimizado.c(175,3) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15301: FUSED LOOP WAS VECTORIZED
+   remark #15453: unmasked strided stores: 2 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 7 
+   remark #15477: vector cost: 6.000 
+   remark #15478: estimated potential speedup: 1.160 
+   remark #15488: --- end vector cost summary ---
+   remark #25015: Estimate of max trip count of loop=62
+LOOP END
+
+LOOP BEGIN at heated_plate_optimizado.c(174,3)
+   remark #25046: Loop lost in Fusion 
+LOOP END
+
+LOOP BEGIN at heated_plate_optimizado.c(171,3)
+<Remainder loop for vectorization>
+   remark #15335: remainder loop was not vectorized: vectorization possible but seems inefficient. Use vector always directive or -vec-threshold0 to override 
+   remark #15305: vectorization support: vector length 2
+   remark #15427: loop was completely unrolled
+   remark #25436: completely unrolled by 2  
+LOOP END
+
+LOOP BEGIN at heated_plate_optimizado.c(177,3)
+   remark #15388: vectorization support: reference w[499][j] has aligned access   [ heated_plate_optimizado.c(178,3) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 4
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15449: unmasked aligned unit stride stores: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 4 
+   remark #15477: vector cost: 1.500 
+   remark #15478: estimated potential speedup: 2.630 
+   remark #15488: --- end vector cost summary ---
+   remark #25015: Estimate of max trip count of loop=62
+LOOP END
+
+LOOP BEGIN at heated_plate_optimizado.c(177,3)
+<Remainder loop for vectorization>
+   remark #25436: completely unrolled by 4  
+LOOP END
+
+LOOP BEGIN at heated_plate_optimizado.c(180,3)
+   remark #25408: memset generated
+   remark #15398: loop was not vectorized: loop was transformed to memset or memcpy
+LOOP END
+
+LOOP BEGIN at heated_plate_optimizado.c(186,3)
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <w[i][0]>, stride is 500   [ heated_plate_optimizado.c(187,17) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 8
+   remark #15309: vectorization support: normalized vectorization overhead 0.339
+   remark #15355: vectorization support: mean is double type reduction   [ heated_plate_optimizado.c(187,3) ]
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15452: unmasked strided loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 6 
+   remark #15477: vector cost: 3.500 
+   remark #15478: estimated potential speedup: 1.690 
+   remark #15488: --- end vector cost summary ---
+   remark #25015: Estimate of max trip count of loop=31
+LOOP END
+
+LOOP BEGIN at heated_plate_optimizado.c(186,3)
+<Remainder loop for vectorization>
+   remark #25436: completely unrolled by 2  
+LOOP END
+
+LOOP BEGIN at heated_plate_optimizado.c(189,3)
+   remark #15328: vectorization support: non-unit strided load was emulated for the variable <w[i][499]>, stride is 500   [ heated_plate_optimizado.c(190,17) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 8
+   remark #15309: vectorization support: normalized vectorization overhead 0.339
+   remark #15355: vectorization support: mean is double type reduction   [ heated_plate_optimizado.c(190,3) ]
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15452: unmasked strided loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 6 
+   remark #15477: vector cost: 3.500 
+   remark #15478: estimated potential speedup: 1.690 
+   remark #15488: --- end vector cost summary ---
+   remark #25015: Estimate of max trip count of loop=31
+LOOP END
+
+LOOP BEGIN at heated_plate_optimizado.c(189,3)
+<Remainder loop for vectorization>
+   remark #25436: completely unrolled by 2  
+LOOP END
+
+LOOP BEGIN at heated_plate_optimizado.c(192,3)
+   remark #15388: vectorization support: reference w[499][j] has aligned access   [ heated_plate_optimizado.c(193,17) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 8
+   remark #15309: vectorization support: normalized vectorization overhead 0.475
+   remark #15355: vectorization support: mean is double type reduction   [ heated_plate_optimizado.c(193,3) ]
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 6 
+   remark #15477: vector cost: 2.500 
+   remark #15478: estimated potential speedup: 2.330 
+   remark #15488: --- end vector cost summary ---
+   remark #25015: Estimate of max trip count of loop=31
+LOOP END
+
+LOOP BEGIN at heated_plate_optimizado.c(192,3)
+<Remainder loop for vectorization>
+   remark #25436: completely unrolled by 4  
+LOOP END
+
+LOOP BEGIN at heated_plate_optimizado.c(195,3)
+   remark #15388: vectorization support: reference w[0][j] has aligned access   [ heated_plate_optimizado.c(196,17) ]
+   remark #15305: vectorization support: vector length 2
+   remark #15399: vectorization support: unroll factor set to 8
+   remark #15309: vectorization support: normalized vectorization overhead 0.475
+   remark #15355: vectorization support: mean is double type reduction   [ heated_plate_optimizado.c(196,3) ]
+   remark #15300: LOOP WAS VECTORIZED
+   remark #15448: unmasked aligned unit stride loads: 1 
+   remark #15475: --- begin vector cost summary ---
+   remark #15476: scalar cost: 6 
+   remark #15477: vector cost: 2.500 
+   remark #15478: estimated potential speedup: 2.330 
+   remark #15488: --- end vector cost summary ---
+   remark #25015: Estimate of max trip count of loop=31
+LOOP END
+
+LOOP BEGIN at heated_plate_optimizado.c(195,3)
+<Remainder loop for vectorization>
+   remark #25436: completely unrolled by 4  
+LOOP END
+
+LOOP BEGIN at heated_plate_optimizado.c(207,3)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at heated_plate_optimizado.c(208,3)
+      remark #15388: vectorization support: reference w[i][j] has aligned access   [ heated_plate_optimizado.c(209,3) ]
+      remark #15305: vectorization support: vector length 2
+      remark #15399: vectorization support: unroll factor set to 4
+      remark #15309: vectorization support: normalized vectorization overhead 0.100
+      remark #15300: LOOP WAS VECTORIZED
+      remark #15449: unmasked aligned unit stride stores: 1 
+      remark #15475: --- begin vector cost summary ---
+      remark #15476: scalar cost: 4 
+      remark #15477: vector cost: 2.500 
+      remark #15478: estimated potential speedup: 1.590 
+      remark #15488: --- end vector cost summary ---
+      remark #25015: Estimate of max trip count of loop=62
+   LOOP END
+
+   LOOP BEGIN at heated_plate_optimizado.c(208,3)
+   <Peeled loop for vectorization>
+      remark #25436: completely unrolled by 1  
+   LOOP END
+
+   LOOP BEGIN at heated_plate_optimizado.c(208,3)
+   <Remainder loop for vectorization>
+      remark #25436: completely unrolled by 1  
+   LOOP END
+LOOP END
+
+LOOP BEGIN at heated_plate_optimizado.c(229,3)
+   remark #25420: Collapsed with loop at line 230 
+   remark #25399: memcopy generated
+   remark #15398: loop was not vectorized: loop was transformed to memset or memcpy
+
+   LOOP BEGIN at heated_plate_optimizado.c(230,3)
+      remark #25421: Loop eliminated in Collapsing 
+
+   LOOP END
+LOOP END
+
+LOOP BEGIN at heated_plate_optimizado.c(229,3)
+   remark #15542: loop was not vectorized: inner loop was already vectorized
+
+   LOOP BEGIN at heated_plate_optimizado.c(241,7)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at heated_plate_optimizado.c(242,9)
+         remark #15388: vectorization support: reference u[i][j] has aligned access   [ heated_plate_optimizado.c(243,11) ]
+         remark #15388: vectorization support: reference w[i-1][j] has aligned access   [ heated_plate_optimizado.c(243,22) ]
+         remark #15388: vectorization support: reference w[i+1][j] has aligned access   [ heated_plate_optimizado.c(243,34) ]
+         remark #15389: vectorization support: reference w[i][j-1] has unaligned access   [ heated_plate_optimizado.c(243,46) ]
+         remark #15389: vectorization support: reference w[i][j+1] has unaligned access   [ heated_plate_optimizado.c(243,58) ]
+         remark #15388: vectorization support: reference w[i][j] has aligned access   [ heated_plate_optimizado.c(246,27) ]
+         remark #15388: vectorization support: reference u[i][j] has aligned access   [ heated_plate_optimizado.c(246,37) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 2
+         remark #15399: vectorization support: unroll factor set to 4
+         remark #15309: vectorization support: normalized vectorization overhead 0.095
+         remark #15355: vectorization support: diff is double type reduction   [ heated_plate_optimizado.c(122,3) ]
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15448: unmasked aligned unit stride loads: 4 
+         remark #15449: unmasked aligned unit stride stores: 1 
+         remark #15450: unmasked unaligned unit stride loads: 2 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 29 
+         remark #15477: vector cost: 25.000 
+         remark #15478: estimated potential speedup: 1.150 
+         remark #15488: --- end vector cost summary ---
+         remark #25456: Number of Array Refs Scalar Replaced In Loop: 4
+         remark #25015: Estimate of max trip count of loop=62
+      LOOP END
+
+      LOOP BEGIN at heated_plate_optimizado.c(242,9)
+      <Peeled loop for vectorization>
+         remark #25436: completely unrolled by 1  
+      LOOP END
+
+      LOOP BEGIN at heated_plate_optimizado.c(242,9)
+      <Remainder loop for vectorization>
+         remark #25436: completely unrolled by 1  
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at heated_plate_optimizado.c(252,7)
+      remark #15542: loop was not vectorized: inner loop was already vectorized
+
+      LOOP BEGIN at heated_plate_optimizado.c(253,9)
+         remark #15388: vectorization support: reference w[i][j] has aligned access   [ heated_plate_optimizado.c(254,11) ]
+         remark #15388: vectorization support: reference u[i-1][j] has aligned access   [ heated_plate_optimizado.c(254,22) ]
+         remark #15388: vectorization support: reference u[i+1][j] has aligned access   [ heated_plate_optimizado.c(254,34) ]
+         remark #15389: vectorization support: reference u[i][j-1] has unaligned access   [ heated_plate_optimizado.c(254,46) ]
+         remark #15389: vectorization support: reference u[i][j+1] has unaligned access   [ heated_plate_optimizado.c(254,58) ]
+         remark #15388: vectorization support: reference w[i][j] has aligned access   [ heated_plate_optimizado.c(255,27) ]
+         remark #15388: vectorization support: reference u[i][j] has aligned access   [ heated_plate_optimizado.c(255,37) ]
+         remark #15381: vectorization support: unaligned access used inside loop body
+         remark #15305: vectorization support: vector length 2
+         remark #15399: vectorization support: unroll factor set to 4
+         remark #15309: vectorization support: normalized vectorization overhead 0.095
+         remark #15355: vectorization support: diff is double type reduction   [ heated_plate_optimizado.c(122,3) ]
+         remark #15300: LOOP WAS VECTORIZED
+         remark #15448: unmasked aligned unit stride loads: 4 
+         remark #15449: unmasked aligned unit stride stores: 1 
+         remark #15450: unmasked unaligned unit stride loads: 2 
+         remark #15475: --- begin vector cost summary ---
+         remark #15476: scalar cost: 29 
+         remark #15477: vector cost: 25.000 
+         remark #15478: estimated potential speedup: 1.150 
+         remark #15488: --- end vector cost summary ---
+         remark #25456: Number of Array Refs Scalar Replaced In Loop: 4
+         remark #25015: Estimate of max trip count of loop=62
+      LOOP END
+
+      LOOP BEGIN at heated_plate_optimizado.c(253,9)
+      <Peeled loop for vectorization>
+         remark #25436: completely unrolled by 1  
+      LOOP END
+
+      LOOP BEGIN at heated_plate_optimizado.c(253,9)
+      <Remainder loop for vectorization>
+         remark #25436: completely unrolled by 1  
+      LOOP END
+   LOOP END
+LOOP END
+
+LOOP BEGIN at heated_plate_optimizado.c(294,3)
+   remark #15382: vectorization support: call to function fprintf(FILE *__restrict__, const char *__restrict__, ...) cannot be vectorized   [ heated_plate_optimizado.c(298,7) ]
+   remark #15382: vectorization support: call to function fprintf(FILE *__restrict__, const char *__restrict__, ...) cannot be vectorized   [ heated_plate_optimizado.c(300,5) ]
+   remark #15344: loop was not vectorized: vector dependence prevents vectorization. First dependence is shown below. Use level 5 report for details
+   remark #15346: vector dependence: assumed OUTPUT dependence between call:fprintf(FILE *__restrict__, const char *__restrict__, ...) (298:7) and call:fprintf(FILE *__restrict__, const char *__restrict__, ...) (300:5)
+
+   LOOP BEGIN at heated_plate_optimizado.c(296,5)
+      remark #15527: loop was not vectorized: function call to fprintf(FILE *__restrict__, const char *__restrict__, ...) cannot be vectorized   [ heated_plate_optimizado.c(298,7) ]
+   LOOP END
+LOOP END
+===========================================================================

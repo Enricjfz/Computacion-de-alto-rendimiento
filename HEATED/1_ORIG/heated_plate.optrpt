@@ -1,0 +1,146 @@
+Intel(R) Advisor can now assist with vectorization and show optimization
+  report messages with your source code.
+See "https://software.intel.com/en-us/intel-advisor-xe" for details.
+
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINING OPTION VALUES:
+  -inline-factor: 100
+  -inline-min-size: 30
+  -inline-max-size: 230
+  -inline-max-total-size: 2000
+  -inline-max-per-routine: 10000
+  -inline-max-per-compile: 500000
+
+
+Begin optimization report for: main(int, char **)
+
+    Report from: Interprocedural optimizations [ipo]
+
+INLINE REPORT: (main(int, char **)) [1] heated_plate.c(110,1)
+  -> INLINE: (146,13) atof(const char *)
+     {{ Inlining of routines from system headers is omitted. Use -qopt-report=3 to view full report. }}
+
+
+    Report from: Loop nest optimizations [loop]
+
+
+LOOP BEGIN at heated_plate.c(166,3)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at heated_plate.c(166,3)
+<Remainder loop for vectorization>
+   remark #25436: completely unrolled by 2  
+LOOP END
+
+LOOP BEGIN at heated_plate.c(169,3)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at heated_plate.c(169,3)
+<Remainder loop for vectorization>
+   remark #25436: completely unrolled by 2  
+LOOP END
+
+LOOP BEGIN at heated_plate.c(172,3)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at heated_plate.c(172,3)
+<Remainder loop for vectorization>
+   remark #25436: completely unrolled by 4  
+LOOP END
+
+LOOP BEGIN at heated_plate.c(175,3)
+   remark #25408: memset generated
+LOOP END
+
+LOOP BEGIN at heated_plate.c(181,3)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at heated_plate.c(181,3)
+<Remainder loop for vectorization>
+   remark #25436: completely unrolled by 2  
+LOOP END
+
+LOOP BEGIN at heated_plate.c(184,3)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at heated_plate.c(184,3)
+<Remainder loop for vectorization>
+   remark #25436: completely unrolled by 2  
+LOOP END
+
+LOOP BEGIN at heated_plate.c(187,3)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at heated_plate.c(187,3)
+<Remainder loop for vectorization>
+   remark #25436: completely unrolled by 4  
+LOOP END
+
+LOOP BEGIN at heated_plate.c(190,3)
+   remark #25460: No loop optimizations reported
+LOOP END
+
+LOOP BEGIN at heated_plate.c(190,3)
+<Remainder loop for vectorization>
+   remark #25436: completely unrolled by 4  
+LOOP END
+
+LOOP BEGIN at heated_plate.c(201,4)
+   remark #25444: Loopnest Interchanged: ( 1 2 ) --> ( 2 1 )
+
+   LOOP BEGIN at heated_plate.c(200,3)
+      remark #25460: No loop optimizations reported
+   LOOP END
+
+   LOOP BEGIN at heated_plate.c(200,3)
+   <Peeled loop for vectorization>
+      remark #25436: completely unrolled by 1  
+   LOOP END
+
+   LOOP BEGIN at heated_plate.c(200,3)
+   <Remainder loop for vectorization>
+      remark #25436: completely unrolled by 1  
+   LOOP END
+LOOP END
+
+LOOP BEGIN at heated_plate.c(219,3)
+   remark #25460: No loop optimizations reported
+
+   LOOP BEGIN at heated_plate.c(224,8)
+      remark #25444: Loopnest Interchanged: ( 1 2 ) --> ( 2 1 )
+      remark #25420: Collapsed with loop at line 223 
+      remark #25399: memcopy generated
+
+      LOOP BEGIN at heated_plate.c(223,5)
+         remark #25421: Loop eliminated in Collapsing 
+
+      LOOP END
+   LOOP END
+
+   LOOP BEGIN at heated_plate.c(231,5)
+      remark #25460: No loop optimizations reported
+
+      LOOP BEGIN at heated_plate.c(233,7)
+         remark #25456: Number of Array Refs Scalar Replaced In Loop: 4
+      LOOP END
+
+      LOOP BEGIN at heated_plate.c(233,7)
+      <Peeled loop for vectorization>
+         remark #25436: completely unrolled by 1  
+      LOOP END
+
+      LOOP BEGIN at heated_plate.c(233,7)
+      <Remainder loop for vectorization>
+         remark #25436: completely unrolled by 1  
+      LOOP END
+   LOOP END
+LOOP END
+===========================================================================

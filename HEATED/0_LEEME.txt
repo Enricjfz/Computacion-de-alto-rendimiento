@@ -1,0 +1,24 @@
+Heated plate:
+
+Ficheros:
+
+- heated_plate.c:
+  Programa C que resuelve la ecuación del calor en estado estacionario
+  Se describe en la cabecera del programa.
+
+Se ejecuta dando dos parametros de entrada:
+	- epsilon: p.e.  0.01 para pruebas iniciales, 0.0001 para evaluar
+	- fichero de salida: p.e. salida.txt
+	
+	$ ./heated_plate 0.0001 salida.txt
+
+- grid_to_bmp
+  Programa para convertir el fichero anterior (salida.txt) a *.bmp y poder
+  visualizarlo con "eog":
+	Parametros de entrada: fichero.txt fichero.bmp
+	
+	$ grid_to_bmp salida.txt salida.bmp
+	$ eog salida.bmp
+	
+	El fuente de grid_to_bmp está en C++, por lo que se compila con icc/g++
+

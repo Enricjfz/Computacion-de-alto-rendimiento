@@ -1,0 +1,12 @@
+Multiplicación de matrices:
+
+mmat.c: Programa que calcula el producto C[][] = A[][] * B[][] 
+
+Se ejecuta pasando 3 parámetros:
+  nº de filas de la matriz A       (p.e. 500 para pruebas, 2000 para evaluar)
+  nº de columnas de la matriz A    (p.e. 500 para pruebas, 2000 para evaluar)
+  nº de columnas de la matriz B    (p.e. 500 para pruebas, 2000 para evaluar)
+	
+  $ ./mmat 2000 2000 2000
+	
+  genera por pantalla un resumen de resultados y la medida del tiempo empleado
